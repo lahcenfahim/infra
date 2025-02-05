@@ -22,7 +22,7 @@ spec:
     spec:
       initContainers:
         - name: init-mysql
-          image: fahimlahcen/php-project-fpm
+          image: fahimlahcen/php-project-fpm:cf8961f
           command:
             - 'sh'
             - '-c'
@@ -37,10 +37,10 @@ spec:
               echo "seed script executed";
       containers:
         - name: php-fpm
-          image: fahimlahcen/php-project-fpm
+          image: fahimlahcen/php-project-fpm:cf8961f
           ports:
             - containerPort: 9000
         - name: nginx
-          image: fahimlahcen/nginx-project
+          image: fahimlahcen/nginx-project:cf8961f
           ports:
             - containerPort: 80
